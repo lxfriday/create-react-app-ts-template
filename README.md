@@ -17,3 +17,11 @@
 - REACT_APP_DESC=我是描述 1,我是描述 2 // html description
 
 带有 `REACT_APP` 可以在单页应用中获取到
+
+## 使用指南
+
+1. `rm -rf .git/ && git init`
+1. 更改 `package.json` `name` 为你的项目名
+1. 更改 `.env` `REACT_APP_VERSION` `REACT_APP_TITLE` `REACT_APP_DESC`
+1. 更改 `.env.production` `PUBLIC_URL=xx` 为你的托管目录，如果是更目录则不用管
+1. 开始开发
