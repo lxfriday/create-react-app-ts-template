@@ -3,12 +3,15 @@
 /// <reference types="react-dom" />
 
 declare namespace NodeJS {
+  __DEV__: string
+
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test'
+    readonly H5: string
     readonly PUBLIC_URL: string
     readonly REACT_APP_VERSION: string
     readonly REACT_APP_TITLE: string
-    readonly H5: string
+    readonly REACT_APP_DESC: string
   }
 }
 
@@ -69,4 +72,9 @@ declare module '*.module.sass' {
 declare module '*.module.less' {
   const classes: { readonly [key: string]: string }
   export default classes
+}
+
+interface Window {
+  _a_i: NodeJS.ProcessEnv
+  readonly __DEV__: boolean
 }

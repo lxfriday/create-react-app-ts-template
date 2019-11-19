@@ -11,4 +11,8 @@ ReactDOM.render(<App />, document.getElementById('root'))
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister()
 
+if (!window.__DEV__) {
+  window._a_i = process.env
+}
+
 console.log(process.env)
