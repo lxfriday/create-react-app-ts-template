@@ -1,14 +1,24 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import styles from 'src/App.module.less'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import Home from './pages/Home'
+import Demo from './pages/Demo'
 
 const App: React.FC = () => {
   return (
-    <div className={styles.App}>
-      <header className={styles.AppHeader}>
-        <p>are i know ok</p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/demo">
+            <Demo />
+          </Route>
+          <Redirect from="*" to="/home"></Redirect>
+        </Switch>
+      </div>
+    </BrowserRouter>
   )
 }
 
