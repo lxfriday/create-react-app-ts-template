@@ -1,5 +1,5 @@
 {
-  "extends": ["@mi/eslint-config-mcfe-react-app", "prettier", "prettier/react"],
+  "extends": ["react-app", "prettier", "prettier/react"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
   "rules": {

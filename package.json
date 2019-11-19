@@ -7,15 +7,15 @@
     "@babel/helper-create-regexp-features-plugin": "^7.7.2",
     "@babel/plugin-syntax-jsx": "^7.2.0",
     "@hot-loader/react-dom": "^16.11.0",
-    "@mi/eslint-config-mcfe-react-app": "^2.1.0",
     "@svgr/webpack": "4.3.2",
     "@teamsupercell/typings-for-css-modules-loader": "^2.1.0",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.8",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
+    "@types/react-router-dom": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
     "amfe-flexible": "^2.2.1",
     "autodll-webpack-plugin": "^0.4.2",
     "babel-eslint": "10.0.3",
@@ -67,6 +67,7 @@
     "react-dev-utils": "^9.1.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",
+    "react-router-dom": "^5.1.2",
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",
@@ -161,8 +162,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.ts": [
-      "prettier --write",
+    "*.js": [
+      "eslint --fix",
       "git add"
     ]
   }
