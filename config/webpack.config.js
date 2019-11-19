@@ -12,7 +12,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const safePostCssParser = require('postcss-safe-parser')
 const ManifestPlugin = require('webpack-manifest-plugin')
-const AutoDllPlugin = require('autodll-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
@@ -23,12 +23,14 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin')
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin')
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter')
 const postcssNormalize = require('postcss-normalize')
+const glob = require('glob')
 
 const paths = require('./paths')
 const modules = require('./modules')
 const getClientEnvironment = require('./env')
 
 const appPackageJson = require(paths.appPackageJson)
+const libFlexible = fs.readFileSync(path.resolve(`${paths.appNodeModules}/amfe-flexible/index.min.js`)).toString()
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
@@ -51,6 +53,7 @@ const lessModuleRegex = /\.module\.less$/
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
+  const isH5 = process.env.H5 === 'TRUE'
   const isEnvDevelopment = webpackEnv === 'development'
   const isEnvProduction = webpackEnv === 'production'
 
@@ -84,6 +87,13 @@ module.exports = function(webpackEnv) {
       {
         loader: require.resolve('css-loader'),
         options: cssOptions,
+      },
+      isH5 && {
+        loader: 'px2rem-loader',
+        options: {
+          remUnit: 108,
+          remPrecision: 8,
+        },
       },
       {
         // Options for PostCSS as we reference these options twice
@@ -495,6 +505,7 @@ module.exports = function(webpackEnv) {
           {
             inject: true,
             template: paths.appHtml,
+            libFlexible: isH5 ? libFlexible : undefined,
           },
           isEnvProduction
             ? {
@@ -515,6 +526,10 @@ module.exports = function(webpackEnv) {
         )
       ),
       new HardSourceWebpackPlugin(),
+      isEnvProduction &&
+        new PurgecssPlugin({
+          paths: glob.sync(`${paths.appSrc}/**/*`, { nodir: true }),
+        }),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358

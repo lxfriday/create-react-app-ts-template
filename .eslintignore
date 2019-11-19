@@ -1,5 +1,4 @@
 app/public
 dist/
 build/
-config/
 *.map.js

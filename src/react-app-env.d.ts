@@ -8,6 +8,7 @@ declare namespace NodeJS {
     readonly PUBLIC_URL: string
     readonly REACT_APP_VERSION: string
     readonly REACT_APP_TITLE: string
+    readonly H5: string
   }
 }
 
