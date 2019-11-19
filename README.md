@@ -11,7 +11,7 @@
 ## env
 
 - BROWSER=NONE # 不默认启动浏览器
-- H5=TRUE # 是 h5 项目，开启 px2rem
+- H5=TRUE # 是 h5 项目，开启 `px2rem` 和 `amfe-flexible`
 - REACT_APP_VERSION=1.0.1 # 应用版本
 - REACT_APP_TITLE=TS 项目 Demo # html title
 - REACT_APP_DESC=我是描述 1,我是描述 2 // html description

@@ -1,11 +1,11 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import 'src/App.css'
+import styles from 'src/App.module.less'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles.AppHeader}>
         <p>are i know ok</p>
       </header>
     </div>

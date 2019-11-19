@@ -20,6 +20,8 @@ const clearConsole = require('react-dev-utils/clearConsole')
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles')
 const { choosePort, createCompiler, prepareProxy, prepareUrls } = require('react-dev-utils/WebpackDevServerUtils')
 const openBrowser = require('react-dev-utils/openBrowser')
+const { checkBrowsers } = require('react-dev-utils/browsersHelper')
+
 const paths = require('../config/paths')
 const configFactory = require('../config/webpack.config')
 const createDevServerConfig = require('../config/webpackDevServer.config')
@@ -42,10 +44,6 @@ if (process.env.HOST) {
   console.log(`Learn more here: ${chalk.yellow('https://bit.ly/CRA-advanced-config')}`)
   console.log()
 }
-
-// We require that you explicitly set browsers and do not fall back to
-// browserslist defaults.
-const { checkBrowsers } = require('react-dev-utils/browsersHelper')
 
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
@@ -75,7 +73,7 @@ checkBrowsers(paths.appPath, isInteractive)
       devSocket,
       urls,
       useYarn,
-      useTypeScript,
+      useTypeScript: false, // useTypeScript 会开启 TS 检查，对新手不友好
       tscCompileOnError,
       webpack,
     })
