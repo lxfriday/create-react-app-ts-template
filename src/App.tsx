@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Home from './pages/Home'
-import Demo from './pages/Demo'
+// import Home from './pages/Home'
+// import Demo from './pages/Demo'
+
+const Home = lazy(() => import('./pages/Home'))
+const Demo = lazy(() => import('./pages/Demo'))
 
 const App: React.FC = () => {
   return (
