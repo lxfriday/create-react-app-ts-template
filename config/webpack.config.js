@@ -12,7 +12,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const safePostCssParser = require('postcss-safe-parser')
 const ManifestPlugin = require('webpack-manifest-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
@@ -545,10 +544,6 @@ module.exports = function(webpackEnv) {
         )
       ),
       new HardSourceWebpackPlugin(),
-      isEnvProduction &&
-        new PurgecssPlugin({
-          paths: glob.sync(`${paths.appSrc}/**/*`, { nodir: true }),
-        }),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
