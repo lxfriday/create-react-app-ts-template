@@ -3,15 +3,21 @@
 /// <reference types="react-dom" />
 
 declare namespace NodeJS {
-  __DEV__: string
-
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test'
     readonly H5: string
     readonly PUBLIC_URL: string
+    readonly UZI_APPID: string
     readonly REACT_APP_VERSION: string
     readonly REACT_APP_TITLE: string
     readonly REACT_APP_DESC: string
+    readonly REACT_APP_SUBMIT_URL: string
+    // sentry 依赖文件的地址
+    readonly REACT_APP_SENRTY_SRC: string
+    // sentry config 地址
+    readonly REACT_APP_SENRTY_CONFIG_LINK: string
+    readonly REACT_APP_USE_WECHAT_SHARE: string
+    readonly USE_GA: string
   }
 }
 
@@ -76,5 +82,8 @@ declare module '*.module.less' {
 
 interface Window {
   _a_i: NodeJS.ProcessEnv
-  readonly __DEV__: boolean
+  reportGA: (age_title: string, page_path: string) => void
+  reportUserBehavior: (behavior: string) => void
+  wx: any
+  Raven: any
 }

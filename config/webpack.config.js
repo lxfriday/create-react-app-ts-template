@@ -22,7 +22,6 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin')
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin')
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter')
 const postcssNormalize = require('postcss-normalize')
-const glob = require('glob')
 
 const paths = require('./paths')
 const modules = require('./modules')
@@ -30,6 +29,7 @@ const getClientEnvironment = require('./env')
 
 const appPackageJson = require(paths.appPackageJson)
 const libFlexible = fs.readFileSync(path.resolve(`${paths.appNodeModules}/amfe-flexible/index.min.js`)).toString()
+const gaTemplate = fs.readFileSync(path.resolve(`${paths.appSrc}/template/ga.html`)).toString()
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
@@ -523,7 +523,21 @@ module.exports = function(webpackEnv) {
           {
             inject: true,
             template: paths.appHtml,
-            libFlexible: isH5 ? libFlexible : undefined,
+            libFlexible: isH5 ? ` <script type="text/javascript">${libFlexible}</script>` : undefined,
+            // uzi
+            UZITemplate: process.env.UZI_APPID
+              ? `
+            <script>
+              window.UZI_config = { appId: ${process.env.UZI_APPID}, dataSchema: 'performance' }
+            </script>
+            <script type="text/javascript" src="https://cdn.cnbj1.fds.api.mi-img.com/mcfe-pieces/uzi/uzi-1.0.0.js" async></script>`
+              : undefined,
+            // 使用微信分享
+            WeChatShareTemplate:
+              process.env.REACT_APP_USE_WECHAT_SHARE === 'TRUE'
+                ? '<script typet="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>'
+                : undefined,
+            GATemplate: process.env.USE_GA === 'TRUE' ? gaTemplate : undefined,
           },
           isEnvProduction
             ? {

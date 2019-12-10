@@ -1,0 +1,66 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148568844-1"></script>
+<script>
+  // ga 统计相关的代码
+  window.dataLayer = window.dataLayer || []
+
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('config', 'UA-148568844-1', { send_page_view: false })
+  try {
+    var observer = new PerformanceObserver(function(list) {
+      for (
+        var _iterator = list.getEntries(),
+          _isArray = Array.isArray(_iterator),
+          _i = 0,
+          _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();
+        ;
+
+      ) {
+        var _ref
+
+        if (_isArray) {
+          if (_i >= _iterator.length) break
+          _ref = _iterator[_i++]
+        } else {
+          _i = _iterator.next()
+          if (_i.done) break
+          _ref = _i.value
+        }
+
+        var entry = _ref
+        var metricName = entry.name
+        var time = Math.round(entry.startTime + entry.duration)
+        var eventName = time < 10000 ? 'performance-event' : 'performance-event-gt10000'
+        var event_category = time < 10000 ? 'Performance Metrics' : 'Performance Metricsgt10000'
+        gtag('event', eventName, {
+          event_category: event_category,
+          event_label: metricName,
+          value: time,
+        })
+      }
+    })
+    observer.observe({
+      entryTypes: ['paint'],
+    })
+  } catch (e) {
+    console.log(e)
+  }
+
+  function reportGA(page_title, page_path) {
+    gtag('js', new Date())
+    gtag('config', 'UA-148568844-1', {
+      page_title: page_title || document.title, //网页的标题
+      page_path: page_path || window.location.href, //网页的url，请带域名，填写完整的路径，请确保每个页面的值唯一，路径中有query参数和其他自带参数请去掉。
+    })
+  }
+
+  // 打点上报
+  // function reportUserBehavior(str) {
+  //   gtag('event', 'ai-thanksgiving-letter', {
+  //     event_category: 'ai-thanksgiving-letter-category',
+  //     event_label: str,
+  //     value: 1,
+  //   })
+  // }
+</script>

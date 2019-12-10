@@ -18,6 +18,7 @@
     "@typescript-eslint/parser": "^2.8.0",
     "amfe-flexible": "^2.2.1",
     "autodll-webpack-plugin": "^0.4.2",
+    "axios": "^0.19.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
