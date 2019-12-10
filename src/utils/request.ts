@@ -56,7 +56,7 @@ type reqType = {
  * 发起网络请求
  * @param data
  */
-export default function request({ method, url, data, headers }: reqType): AxiosPromise {
+export function request({ method, url, data, headers }: reqType): AxiosPromise {
   return axios({
     url,
     method,

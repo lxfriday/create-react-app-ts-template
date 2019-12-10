@@ -579,7 +579,6 @@ module.exports = function(webpackEnv) {
       // Otherwise React will be compiled in the very slow development mode.
       new webpack.DefinePlugin({
         ...env.stringified,
-        __DEV__: JSON.stringify(isEnvDevelopment),
       }),
       // This is necessary to emit hot updates (currently CSS only):
       isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),

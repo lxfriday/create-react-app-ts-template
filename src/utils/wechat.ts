@@ -3,7 +3,7 @@
  */
 
 import { AxiosResponse } from 'axios'
-import request from './request'
+import { request } from './request'
 
 type wechatAuthorizeDataType = {
   signature: string
