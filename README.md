@@ -49,4 +49,4 @@
 
 **发布阶段**
 
-1. 更改 `.env.production` `PUBLIC_URL=xx` 为你的托管目录，如果是更目录则不用管
+1. 更改 `.env.production` `PUBLIC_URL=xx` 为你的托管目录，如果是根目录则不用管
