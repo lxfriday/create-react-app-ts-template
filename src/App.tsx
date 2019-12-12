@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { getWechatAuthorized, isWechat, isLocalHost } from 'src/utils'
 import { wxShareInfo } from 'src/utils/constants'
 import Loading from 'src/components/common/Loading'
@@ -95,7 +95,7 @@ const App: React.FC = () => {
   useConfigWxShare()
   useConfigSentry()
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route path="/home">
@@ -107,7 +107,7 @@ const App: React.FC = () => {
           <Redirect from="*" to="/home"></Redirect>
         </Switch>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
