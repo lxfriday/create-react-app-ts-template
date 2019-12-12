@@ -1,20 +1,11 @@
-import React, { ReactElement, useEffect } from 'react'
+import React, { ReactElement } from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
-
+import GAHoc from 'src/components/common/GAHoc'
 import styles from './index.module.less'
 
 interface Props {}
 
-// ga 上报
-function useReportGA() {
-  useEffect(() => {
-    const { origin, pathname } = window.location
-    window['reportGA']('感恩信首页', `${origin}${pathname}#/home`)
-  }, [])
-}
-
 function Home(props: Props & RouteComponentProps): ReactElement {
-  useReportGA()
   return (
     <div className={styles.container}>
       <h1>this is home</h1>
@@ -23,4 +14,4 @@ function Home(props: Props & RouteComponentProps): ReactElement {
   )
 }
 
-export default withRouter(Home)
+export default GAHoc({ title: 'home页面' })(withRouter(Home))
