@@ -80,14 +80,16 @@ function useConfigSentry() {
   //   Raven.config('https://b930084113ad4d56851f6dd0557c6589@sentry.micloud.d.xiaomi.net/130').install()
   // </script>
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = process.env.REACT_APP_SENRTY_SRC
-    script.crossOrigin = 'anonymous'
-    script.async = true
-    script.onload = function onload() {
-      window.Raven.config(process.env.REACT_APP_SENRTY_CONFIG_LINK).install()
+    if (process.env.REACT_APP_USE_SENTRY === 'TRUE') {
+      const script = document.createElement('script')
+      script.src = process.env.REACT_APP_SENRTY_SRC
+      script.crossOrigin = 'anonymous'
+      script.async = true
+      script.onload = function onload() {
+        window.Raven.config(process.env.REACT_APP_SENRTY_CONFIG_LINK).install()
+      }
+      document.body.append(script)
     }
-    document.body.append(script)
   }, [])
 }
 

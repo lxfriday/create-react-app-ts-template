@@ -22,7 +22,7 @@
 - `USE_GA` 启用 GA
 - `USE_UZI` 启用 UZI
 - `UZI_APPID` UZI appid
-- `USE_SENTRY` 启用 sentry
+- `REACT_APP_USE_SENTRY` 启用 sentry
 - `REACT_APP_SENRTY_SRC` sentry 依赖地址
 - `REACT_APP_SENRTY_CONFIG_LINK` sentry 配置地址
 

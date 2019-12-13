@@ -525,13 +525,14 @@ module.exports = function(webpackEnv) {
             template: paths.appHtml,
             libFlexible: isH5 ? ` <script type="text/javascript">${libFlexible}</script>` : undefined,
             // uzi
-            UZITemplate: process.env.UZI_APPID
-              ? `
+            UZITemplate:
+              process.env.USE_UZI === 'TRUE'
+                ? `
             <script>
               window.UZI_config = { appId: ${process.env.UZI_APPID}, dataSchema: 'performance' }
             </script>
             <script type="text/javascript" src="https://cdn.cnbj1.fds.api.mi-img.com/mcfe-pieces/uzi/uzi-1.0.0.js" async></script>`
-              : undefined,
+                : undefined,
             // 使用微信分享
             WeChatShareTemplate:
               process.env.REACT_APP_USE_WECHAT_SHARE === 'TRUE'
