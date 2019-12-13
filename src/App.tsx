@@ -1,12 +1,9 @@
-import React, { Suspense, lazy, useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { getWechatAuthorized, isWechat, isLocalHost } from 'src/utils'
 import { wxShareInfo } from 'src/utils/constants'
 import Loading from 'src/components/common/Loading'
-
-const Home = lazy(() => import('./pages/Home'))
-const Demo = lazy(() => import('./pages/Demo'))
+import AppRouter from 'src/Router'
 
 // 配置微信分享
 function useConfigWxShare() {
@@ -97,19 +94,9 @@ const App: React.FC = () => {
   useConfigWxShare()
   useConfigSentry()
   return (
-    <HashRouter>
-      <Suspense fallback={<Loading />}>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/demo">
-            <Demo />
-          </Route>
-          <Redirect from="*" to="/home"></Redirect>
-        </Switch>
-      </Suspense>
-    </HashRouter>
+    <Suspense fallback={<Loading />}>
+      <AppRouter />
+    </Suspense>
   )
 }
 

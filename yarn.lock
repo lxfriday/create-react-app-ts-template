@@ -863,6 +863,14 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.6.0"
 
+"@babel/runtime@7.0.0-beta.46":
+  version "7.0.0-beta.46"
+  resolved "http://registry.npm.pt.mi.com/@babel/runtime/download/@babel/runtime-7.0.0-beta.46.tgz#466a9c0498f6d12d054a185981eef742d59d4871"
+  integrity sha1-RmqcBJj20S0FShhZge73QtWdSHE=
+  dependencies:
+    core-js "^2.5.3"
+    regenerator-runtime "^0.11.1"
+
 "@babel/runtime@7.6.0":
   version "7.6.0"
   resolved "http://registry.npm.pt.mi.com/@babel/runtime/download/@babel/runtime-7.6.0.tgz#4fc1d642a9fd0299754e8b5de62c631cf5568205"
@@ -870,7 +878,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
   version "7.7.2"
   resolved "http://registry.npm.pt.mi.com/@babel/runtime/download/@babel/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
   integrity sha1-ERp4ACpcJfyOM2G+3JUpxpa4Wmo=
@@ -1476,6 +1484,11 @@
   resolved "http://registry.npm.pt.mi.com/@types/history/download/@types/history-4.7.3.tgz#856c99cdc1551d22c22b18b5402719affec9839a"
   integrity sha1-hWyZzcFVHSLCKxi1QCcZr/7Jg5o=
 
+"@types/isomorphic-fetch@^0.0.34":
+  version "0.0.34"
+  resolved "http://registry.npm.pt.mi.com/@types/isomorphic-fetch/download/@types/isomorphic-fetch-0.0.34.tgz#3c3483e606c041378438e951464f00e4e60706d6"
+  integrity sha1-PDSD5gbAQTeEOOlRRk8A5OYHBtY=
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "http://registry.npm.pt.mi.com/@types/istanbul-lib-coverage/download/@types/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -1533,12 +1546,26 @@
   resolved "http://registry.npm.pt.mi.com/@types/q/download/@types/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha1-aQoUdbhPKohP0HzXl8APXzE1bqg=
 
+"@types/qs@^6.9.0":
+  version "6.9.0"
+  resolved "http://registry.npm.pt.mi.com/@types/qs/download/@types/qs-6.9.0.tgz#2a5fa918786d07d3725726f7f650527e1cfeaffd"
+  integrity sha1-Kl+pGHhtB9NyVyb39lBSfhz+r/0=
+
 "@types/react-dom@16.9.4":
   version "16.9.4"
   resolved "http://registry.npm.pt.mi.com/@types/react-dom/download/@types/react-dom-16.9.4.tgz#0b58df09a60961dcb77f62d4f1832427513420df"
   integrity sha1-C1jfCaYJYdy3f2LU8YMkJ1E0IN8=
   dependencies:
     "@types/react" "*"
+
+"@types/react-router-dom@^4.2.7":
+  version "4.3.5"
+  resolved "http://registry.npm.pt.mi.com/@types/react-router-dom/download/@types/react-router-dom-4.3.5.tgz#72f229967690c890d00f96e6b85e9ee5780db31f"
+  integrity sha1-cvIplnaQyJDQD5bmuF6e5XgNsx8=
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
 
 "@types/react-router-dom@^5.1.2":
   version "5.1.2"
@@ -1548,6 +1575,16 @@
     "@types/history" "*"
     "@types/react" "*"
     "@types/react-router" "*"
+
+"@types/react-router-redux@^5.0.13":
+  version "5.0.18"
+  resolved "http://registry.npm.pt.mi.com/@types/react-router-redux/download/@types/react-router-redux-5.0.18.tgz#5f28d5f7387fa71e33f602ccf9269e1609d47b8b"
+  integrity sha1-XyjV9zh/px4z9gLM+SaeFgnUe4s=
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+    redux ">= 3.7.2"
 
 "@types/react-router@*":
   version "5.1.3"
@@ -3219,6 +3256,11 @@ core-js@^2.4.0, core-js@^2.5.0:
   resolved "http://registry.npm.pt.mi.com/core-js/download/core-js-2.6.10.tgz#8a5b8391f8cc7013da703411ce5b585706300d7f"
   integrity sha1-iluDkfjMcBPacDQRzltYVwYwDX8=
 
+core-js@^2.5.3:
+  version "2.6.11"
+  resolved "http://registry.npm.pt.mi.com/core-js/download/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
+  integrity sha1-OIMUafmSK97Y7iHJ3EaYXgOZMIw=
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "http://registry.npm.pt.mi.com/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -3630,6 +3672,11 @@ dedent@^0.7.0:
   resolved "http://registry.npm.pt.mi.com/dedent/download/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
   integrity sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
 
+deep-diff@^0.3.5:
+  version "0.3.8"
+  resolved "http://registry.npm.pt.mi.com/deep-diff/download/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
+  integrity sha1-wB3mPvsO7JeYgB1Ax+Da4ltYLIQ=
+
 deep-equal@^1.0.1:
   version "1.1.1"
   resolved "http://registry.npm.pt.mi.com/deep-equal/download/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
@@ -3946,6 +3993,53 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
+dva-core@^1.4.0:
+  version "1.4.0"
+  resolved "http://registry.npm.pt.mi.com/dva-core/download/dva-core-1.4.0.tgz#30aed800b97f07f768e42049094ee3150f48c5d3"
+  integrity sha1-MK7YALl/B/do5CBJCU7jFQ9IxdM=
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.46"
+    flatten "^1.0.2"
+    global "^4.3.2"
+    invariant "^2.2.1"
+    is-plain-object "^2.0.3"
+    redux "^3.7.1"
+    redux-saga "^0.16.0"
+    warning "^3.0.0"
+
+dva-loading@^3.0.19:
+  version "3.0.19"
+  resolved "http://registry.npm.pt.mi.com/dva-loading/download/dva-loading-3.0.19.tgz#843ada94744b9cb21d00614d99b01e78f8bdb7d1"
+  integrity sha1-hDralHRLnLIdAGFNmbAeePi9t9E=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+dva-logger@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.pt.mi.com/dva-logger/download/dva-logger-1.0.0.tgz#9c7ad57538f3e5451f7935fadd22a1e7fcb80501"
+  integrity sha1-nHrVdTjz5UUfeTX63SKh5/y4BQE=
+  dependencies:
+    redux-logger "^3.0.6"
+
+dva@^2.4.1:
+  version "2.4.1"
+  resolved "http://registry.npm.pt.mi.com/dva/download/dva-2.4.1.tgz#a3eeb07bb8bc6e2ff9ffe31799d03cb69e45f5fd"
+  integrity sha1-o+6we7i8bi/5/+MXmdA8tp5F9f0=
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.46"
+    "@types/isomorphic-fetch" "^0.0.34"
+    "@types/react-router-dom" "^4.2.7"
+    "@types/react-router-redux" "^5.0.13"
+    dva-core "^1.4.0"
+    global "^4.3.2"
+    history "^4.6.3"
+    invariant "^2.2.2"
+    isomorphic-fetch "^2.2.1"
+    react-redux "5.0.7"
+    react-router-dom "^4.1.2"
+    react-router-redux "5.0.0-alpha.9"
+    redux "^3.7.2"
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "http://registry.npm.pt.mi.com/ecc-jsbn/download/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -4001,6 +4095,13 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.pt.mi.com/encodeurl/download/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+
+encoding@^0.1.11:
+  version "0.1.12"
+  resolved "http://registry.npm.pt.mi.com/encoding/download/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
+  integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
+  dependencies:
+    iconv-lite "~0.4.13"
 
 end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   version "1.4.4"
@@ -5048,7 +5149,7 @@ global-prefix@^3.0.0:
     kind-of "^6.0.2"
     which "^1.3.1"
 
-global@^4.3.0:
+global@^4.3.0, global@^4.3.2:
   version "4.4.0"
   resolved "http://registry.npm.pt.mi.com/global/download/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
   integrity sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=
@@ -5115,11 +5216,6 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "http://registry.npm.pt.mi.com/growly/download/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
-
-gud@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.pt.mi.com/gud/download/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
-  integrity sha1-pIlYGxfmpwvsqavjrlfeekmYUsA=
 
 gzip-size@5.1.1:
   version "5.1.1"
@@ -5275,7 +5371,7 @@ hex-color-regex@^1.1.0:
   resolved "http://registry.npm.pt.mi.com/hex-color-regex/download/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha1-TAb8y0YC/iYCs8k9+C1+fb8aio4=
 
-history@^4.9.0:
+history@^4.10.1, history@^4.6.3, history@^4.7.2:
   version "4.10.1"
   resolved "http://registry.npm.pt.mi.com/history/download/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
   integrity sha1-MzcaZeOoOyZ0NOKz87G0xYqtTPM=
@@ -5296,7 +5392,12 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^2.5.0:
+  version "2.5.5"
+  resolved "http://registry.npm.pt.mi.com/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+  integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
+
+hoist-non-react-statics@^3.3.0:
   version "3.3.1"
   resolved "http://registry.npm.pt.mi.com/hoist-non-react-statics/download/hoist-non-react-statics-3.3.1.tgz#101685d3aff3b23ea213163f6e8e12f4f111e19f"
   integrity sha1-EBaF06/zsj6iExY/bo4S9PER4Z8=
@@ -5474,7 +5575,7 @@ husky@^3.1.0:
     run-node "^1.0.0"
     slash "^3.0.0"
 
-iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
+iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
   resolved "http://registry.npm.pt.mi.com/iconv-lite/download/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=
@@ -5679,7 +5780,7 @@ internal-ip@^4.2.0:
     default-gateway "^4.2.0"
     ipaddr.js "^1.9.0"
 
-invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.0.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "http://registry.npm.pt.mi.com/invariant/download/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
@@ -5973,7 +6074,7 @@ is-root@2.1.0:
   resolved "http://registry.npm.pt.mi.com/is-root/download/is-root-2.1.0.tgz#809e18129cf1129644302a4f8544035d51984a9c"
   integrity sha1-gJ4YEpzxEpZEMCpPhUQDXVGYSpw=
 
-is-stream@^1.1.0:
+is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.pt.mi.com/is-stream/download/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
@@ -6045,6 +6146,14 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.pt.mi.com/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+
+isomorphic-fetch@^2.2.1:
+  version "2.2.1"
+  resolved "http://registry.npm.pt.mi.com/isomorphic-fetch/download/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
 
 isstream@~0.1.2:
   version "0.1.2"
@@ -6909,6 +7018,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@^4.17.5, lodash-es@^4.2.1:
+  version "4.17.15"
+  resolved "http://registry.npm.pt.mi.com/lodash-es/download/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
+
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.pt.mi.com/lodash._reinterpolate/download/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -7252,15 +7366,6 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
-mini-create-react-context@^0.3.0:
-  version "0.3.2"
-  resolved "http://registry.npm.pt.mi.com/mini-create-react-context/download/mini-create-react-context-0.3.2.tgz#79fc598f283dd623da8e088b05db8cddab250189"
-  integrity sha1-efxZjyg91iPajgiLBduM3aslAYk=
-  dependencies:
-    "@babel/runtime" "^7.4.0"
-    gud "^1.0.0"
-    tiny-warning "^1.0.2"
-
 mini-css-extract-plugin@0.8.0:
   version "0.8.0"
   resolved "http://registry.npm.pt.mi.com/mini-css-extract-plugin/download/mini-css-extract-plugin-0.8.0.tgz#81d41ec4fe58c713a96ad7c723cdb2d0bd4d70e1"
@@ -7482,6 +7587,14 @@ no-case@^2.2.0:
   integrity sha1-YLgTOWvjmz8SiKTB7V0efSi0ZKw=
   dependencies:
     lower-case "^1.1.1"
+
+node-fetch@^1.0.1:
+  version "1.7.3"
+  resolved "http://registry.npm.pt.mi.com/node-fetch/download/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  integrity sha1-mA9vcthSEaU0fGsrwYxbhMPrR+8=
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
 
 node-forge@0.9.0:
   version "0.9.0"
@@ -9042,7 +9155,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "http://registry.npm.pt.mi.com/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -9149,6 +9262,11 @@ qs@6.7.0:
   version "6.7.0"
   resolved "http://registry.npm.pt.mi.com/qs/download/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
+
+qs@^6.9.1:
+  version "6.9.1"
+  resolved "http://registry.npm.pt.mi.com/qs/download/qs-6.9.1.tgz#20082c65cb78223635ab1a9eaca8875a29bf8ec9"
+  integrity sha1-IAgsZct4IjY1qxqerKiHWim/jsk=
 
 qs@~6.5.2:
   version "6.5.2"
@@ -9310,7 +9428,7 @@ react-hot-loader@^4.12.18:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.12.0"
   resolved "http://registry.npm.pt.mi.com/react-is/download/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha1-LMD+D7p0LZf9UnxCoTvsTusGJBw=
@@ -9320,34 +9438,51 @@ react-lifecycles-compat@^3.0.4:
   resolved "http://registry.npm.pt.mi.com/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
-react-router-dom@^5.1.2:
-  version "5.1.2"
-  resolved "http://registry.npm.pt.mi.com/react-router-dom/download/react-router-dom-5.1.2.tgz#06701b834352f44d37fbb6311f870f84c76b9c18"
-  integrity sha1-BnAbg0NS9E03+7YxH4cPhMdrnBg=
+react-redux@5.0.7:
+  version "5.0.7"
+  resolved "http://registry.npm.pt.mi.com/react-redux/download/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
+  integrity sha1-DcEHbZr7RnD5k/+u9EuPjBFVpMg=
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    history "^4.9.0"
-    loose-envify "^1.3.1"
-    prop-types "^15.6.2"
-    react-router "5.1.2"
-    tiny-invariant "^1.0.2"
-    tiny-warning "^1.0.0"
+    hoist-non-react-statics "^2.5.0"
+    invariant "^2.0.0"
+    lodash "^4.17.5"
+    lodash-es "^4.17.5"
+    loose-envify "^1.1.0"
+    prop-types "^15.6.0"
 
-react-router@5.1.2:
-  version "5.1.2"
-  resolved "http://registry.npm.pt.mi.com/react-router/download/react-router-5.1.2.tgz#6ea51d789cb36a6be1ba5f7c0d48dd9e817d3418"
-  integrity sha1-bqUdeJyzamvhul98DUjdnoF9NBg=
+react-router-dom@^4.1.2:
+  version "4.3.1"
+  resolved "http://registry.npm.pt.mi.com/react-router-dom/download/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
+  integrity sha1-TCYZ/CTE+ofJ/Rj0+0pD/mP71cY=
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    history "^4.9.0"
-    hoist-non-react-statics "^3.1.0"
+    history "^4.7.2"
+    invariant "^2.2.4"
     loose-envify "^1.3.1"
-    mini-create-react-context "^0.3.0"
+    prop-types "^15.6.1"
+    react-router "^4.3.1"
+    warning "^4.0.1"
+
+react-router-redux@5.0.0-alpha.9:
+  version "5.0.0-alpha.9"
+  resolved "http://registry.npm.pt.mi.com/react-router-redux/download/react-router-redux-5.0.0-alpha.9.tgz#825431516e0e6f1fd93b8807f6bd595e23ec3d10"
+  integrity sha1-glQxUW4Obx/ZO4gH9r1ZXiPsPRA=
+  dependencies:
+    history "^4.7.2"
+    prop-types "^15.6.0"
+    react-router "^4.2.0"
+
+react-router@^4.2.0, react-router@^4.3.1:
+  version "4.3.1"
+  resolved "http://registry.npm.pt.mi.com/react-router/download/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
+  integrity sha1-qtpK7xTICcsuaGsFzuR0IjRQbE4=
+  dependencies:
+    history "^4.7.2"
+    hoist-non-react-statics "^2.5.0"
+    invariant "^2.2.4"
+    loose-envify "^1.3.1"
     path-to-regexp "^1.7.0"
-    prop-types "^15.6.2"
-    react-is "^16.6.0"
-    tiny-invariant "^1.0.2"
-    tiny-warning "^1.0.0"
+    prop-types "^15.6.1"
+    warning "^4.0.1"
 
 react@^16.12.0:
   version "16.12.0"
@@ -9463,6 +9598,36 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
+redux-logger@^3.0.6:
+  version "3.0.6"
+  resolved "http://registry.npm.pt.mi.com/redux-logger/download/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
+  integrity sha1-91VZZvMJjzyIYExEnPC69XeCdL8=
+  dependencies:
+    deep-diff "^0.3.5"
+
+redux-saga@^0.16.0:
+  version "0.16.2"
+  resolved "http://registry.npm.pt.mi.com/redux-saga/download/redux-saga-0.16.2.tgz#993662e86bc945d8509ac2b8daba3a8c615cc971"
+  integrity sha1-mTZi6GvJRdhQmsK42ro6jGFcyXE=
+
+"redux@>= 3.7.2":
+  version "4.0.4"
+  resolved "http://registry.npm.pt.mi.com/redux/download/redux-4.0.4.tgz#4ee1aeb164b63d6a1bcc57ae4aa0b6e6fa7a3796"
+  integrity sha1-TuGusWS2PWobzFeuSqC25vp6N5Y=
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
+
+redux@^3.7.1, redux@^3.7.2:
+  version "3.7.2"
+  resolved "http://registry.npm.pt.mi.com/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  integrity sha1-BrcxIyFZAdJdBlvjQusCa8HIU3s=
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
+
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "http://registry.npm.pt.mi.com/regenerate-unicode-properties/download/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
@@ -9485,7 +9650,7 @@ regenerator-runtime@^0.10.5:
   resolved "http://registry.npm.pt.mi.com/regenerator-runtime/download/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
   integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
 
-regenerator-runtime@^0.11.0:
+regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
   version "0.11.1"
   resolved "http://registry.npm.pt.mi.com/regenerator-runtime/download/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha1-vgWtf5v30i4Fb5cmzuUBf78Z4uk=
@@ -10645,7 +10810,7 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@^1.1.0:
+symbol-observable@^1.0.3, symbol-observable@^1.1.0, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.pt.mi.com/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ=
@@ -10776,7 +10941,7 @@ tiny-invariant@^1.0.2:
   resolved "http://registry.npm.pt.mi.com/tiny-invariant/download/tiny-invariant-1.0.6.tgz#b3f9b38835e36a41c843a3b0907a5a7b3755de73"
   integrity sha1-s/mziDXjakHIQ6OwkHpaezdV3nM=
 
-tiny-warning@^1.0.0, tiny-warning@^1.0.2:
+tiny-warning@^1.0.0:
   version "1.0.3"
   resolved "http://registry.npm.pt.mi.com/tiny-warning/download/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha1-lKMNtFPfTGQ9D9VmBg1gqHXYR1Q=
@@ -11212,6 +11377,20 @@ walker@^1.0.7, walker@~1.0.5:
   dependencies:
     makeerror "1.0.x"
 
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.pt.mi.com/warning/download/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
+
+warning@^4.0.1:
+  version "4.0.3"
+  resolved "http://registry.npm.pt.mi.com/warning/download/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha1-Fungd+uKhtavfWSqHgX9hbRnjKM=
+  dependencies:
+    loose-envify "^1.0.0"
+
 watchpack@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.pt.mi.com/watchpack/download/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
@@ -11363,7 +11542,7 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3, whatwg-encoding@^1.0.5:
   dependencies:
     iconv-lite "0.4.24"
 
-whatwg-fetch@3.0.0:
+whatwg-fetch@3.0.0, whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "http://registry.npm.pt.mi.com/whatwg-fetch/download/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha1-/IBORYzEYACbGiuWa8iBfSV4rvs=

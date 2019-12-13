@@ -1,6 +1,6 @@
 import Axios, { AxiosPromise } from 'axios'
 
-type AxiosRequestData = {
+export type AxiosRequestData = {
   [key: string]: string
 }
 
@@ -45,11 +45,11 @@ axios.interceptors.response.use(
   }
 )
 
-type reqType = {
+export type reqType = {
   method: 'GET' | 'POST'
   url: string
   data?: AxiosRequestData
-  headers?: any
+  headers?: Object
 }
 
 /**

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { withRouter, RouteComponentProps } from 'react-router-dom'
+import { withRouter, RouteComponentProps } from 'dva/router'
 import GAHoc from 'src/components/common/GAHoc'
 import styles from './index.module.less'
 

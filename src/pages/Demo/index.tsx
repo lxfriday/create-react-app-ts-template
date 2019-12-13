@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { withRouter, RouteComponentProps } from 'react-router-dom'
+import { withRouter, RouteComponentProps } from 'dva/router'
 import GAHoc from 'src/components/common/GAHoc'
 
 import styles from './index.module.less'
@@ -10,7 +10,7 @@ function Demo(props: Props & RouteComponentProps): ReactElement {
   return (
     <div className={styles.container}>
       <h1>this is demo</h1>
-      <button onClick={() => props.history.push('/home')}>to home</button>
+      <button onClick={() => props.history.push('/list')}>to list</button>
     </div>
   )
 }
