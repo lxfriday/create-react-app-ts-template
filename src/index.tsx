@@ -1,7 +1,6 @@
 import React from 'react'
 import dva from 'dva'
 import { Router } from 'dva/router'
-import { createHashHistory } from 'history'
 // @ts-ignore
 import createLogger from 'dva-logger'
 // @ts-ignore
@@ -11,6 +10,8 @@ import App from 'src/App'
 import registerModels from 'src/models/registerModels'
 import 'src/index.less'
 import * as serviceWorker from 'src/serviceWorker'
+
+const createHashHistory = require('history').createHashHistory
 
 const app = dva({
   onError(error: Error) {

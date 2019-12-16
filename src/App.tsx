@@ -94,7 +94,7 @@ const App: React.FC = () => {
   useConfigWxShare()
   useConfigSentry()
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={null}>
       <AppRouter />
     </Suspense>
   )
