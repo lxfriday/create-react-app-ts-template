@@ -533,6 +533,11 @@ module.exports = function(webpackEnv) {
             </script>
             <script type="text/javascript" src="https://cdn.cnbj1.fds.api.mi-img.com/mcfe-pieces/uzi/uzi-1.0.0.js" async></script>`
                 : undefined,
+            // vconsole
+            VConsole:
+              process.env.USE_VCONSOLE === 'TRUE'
+                ? `<script src="https://cdn.staticfile.org/vConsole/3.3.4/vconsole.min.js"></script><script>new VConsole()</script>`
+                : undefined,
             // 使用微信分享
             WeChatShareTemplate:
               process.env.REACT_APP_USE_WECHAT_SHARE === 'TRUE'
