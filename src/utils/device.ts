@@ -54,3 +54,30 @@ function getEnv() {
 
 // 获取当前浏览器和操作系统的环境
 export const env = getEnv()
+
+// 小爱同学 app 下载
+export const LINKS = {
+  DOWNLOAD_URL: {
+    ANDROID: 'https://xiaoai.mi.com/download/voiceassistant/share',
+    IOS: 'https://itunes.apple.com/cn/app/id1436959122',
+    XIAOMI: 'https://xiaoai.mi.com/download/voiceassistant/share',
+  },
+  SCHEME_URL: {
+    ANDROID: ['xiaoailite://main/toneSetting'],
+    IOS: ['xiaoailite://main/toneSetting'],
+    XIAOMI: ['voiceassist://ttsvendor/toneSetting', 'voiceassist://ttsvendor/toneRecord'],
+  },
+}
+
+// 前往下载地址
+export const goToDownload = () => {
+  let link = ''
+  if (env.isXiaomi) {
+    link = LINKS.DOWNLOAD_URL.XIAOMI
+  } else if (env.isIOS) {
+    link = LINKS.DOWNLOAD_URL.IOS
+  } else {
+    link = LINKS.DOWNLOAD_URL.ANDROID
+  }
+  window.location.href = link
+}
