@@ -164,13 +164,17 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "tsc --noEmit && lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
+    "**/*.js?(x)": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.ts?(x)": [
+      "prettier --write",
       "git add"
     ]
   }
