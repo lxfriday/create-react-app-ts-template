@@ -32,7 +32,7 @@ const libFlexible = fs.readFileSync(path.resolve(`${paths.appNodeModules}/amfe-f
 const gaTemplate = fs.readFileSync(path.resolve(`${paths.appSrc}/template/ga.html`)).toString()
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
+const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP === 'TRUE'
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false'
@@ -563,7 +563,7 @@ module.exports = function(webpackEnv) {
             : undefined
         )
       ),
-      new HardSourceWebpackPlugin(),
+      isEnvDevelopment && new HardSourceWebpackPlugin(),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
