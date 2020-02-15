@@ -10,7 +10,7 @@ function Demo(props: Props & RouteComponentProps): ReactElement {
   return (
     <div className={styles.container}>
       <h1>this is demo</h1>
-      <button onClick={() => props.history.push('/list')}>to list</button>
+      <button onClick={() => props.history.push('/comps')}>to comps</button>
     </div>
   )
 }

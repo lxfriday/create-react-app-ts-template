@@ -1,0 +1,35 @@
+.container {
+  width: 100vh;
+  width: 100vw;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &.hide {
+    display: none;
+  }
+
+  .bubbleWrapper {
+    position: fixed;
+    top: 35px;
+    right: 30px;
+    background-image: url(../../../assets/imgs/bubble.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 480px;
+    height: 187px;
+    font-size: 46px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    z-index: 999;
+
+    div {
+      margin-top: 76px;
+    }
+  }
+}
