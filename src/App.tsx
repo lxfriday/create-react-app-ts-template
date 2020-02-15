@@ -2,7 +2,6 @@ import React, { Suspense, useEffect } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { getWechatAuthorized, isWechat, isLocalHost } from 'src/utils'
 import { wxShareInfo } from 'src/utils/constants'
-import Loading from 'src/components/common/Loading'
 import AppRouter from 'src/Router'
 
 // 配置微信分享
