@@ -86,4 +86,11 @@ interface Window {
   reportUserBehavior: (behavior: string) => void
   wx: any
   Raven: any
+  xiaoai: any
+  app: any
+  webkit: any
+  postData: any
+  onShareResult: Function
+  startActivity: Function
+  userCurrentCity: any // 打点需要
 }

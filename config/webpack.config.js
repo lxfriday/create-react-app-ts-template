@@ -84,7 +84,7 @@ module.exports = function(webpackEnv) {
         loader: MiniCssExtractPlugin.loader,
         options: shouldUseRelativeAssetPaths ? { publicPath: '../../' } : {},
       },
-      '@teamsupercell/typings-for-css-modules-loader',
+      isEnvDevelopment && '@teamsupercell/typings-for-css-modules-loader',
       {
         loader: require.resolve('css-loader'),
         options: cssOptions,

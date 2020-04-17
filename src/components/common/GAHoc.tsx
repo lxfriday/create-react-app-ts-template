@@ -19,7 +19,10 @@ export default function GAHoc(reportData?: reportDataType) {
         let reportTitle = document.title
         let reportLink = `${origin}${pathname}${hash}`
 
-        if (reportData && reportData.title) reportTitle = reportData.title
+        if (reportData && reportData.title) {
+          document.title = reportData.title
+          reportTitle = reportData.title
+        }
         if (reportData && reportData.link) reportLink = reportData.link
 
         if (isDEV) {

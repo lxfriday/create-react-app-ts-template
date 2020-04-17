@@ -1,4 +1,5 @@
 import Axios, { AxiosPromise } from 'axios'
+import { showToast } from 'src/components/common/Toast'
 
 export type AxiosRequestData = {
   [key: string]: string
@@ -36,12 +37,24 @@ axios.interceptors.response.use(
     //      headers: {},      // 服务器响应头
     //      config: {}        // axios 的配置
     // }
-    return response
+    const { data, status } = response
+    console.log('response', response)
+
+    if (status >= 200 && status < 300) {
+      return data
+    }
+    return {
+      code: '-1',
+      message: `请求失败`,
+    }
   },
   error => {
     // 当响应异常时做一些处理
     // 这里我们把错误信息扶正, 后面就不需要写 catch 了
-    return Promise.resolve(error.response)
+    return Promise.resolve({
+      code: '-1',
+      message: `网络不畅，请重试`,
+    })
   }
 )
 
